@@ -8,17 +8,17 @@ use App\Mylibs\Cart;
 class SircloController extends Controller
 {
     public function index(){
-		$rafi = new Cart;
-		$rafi->addProduct("White Cap", 2);
-		$rafi->addProduct("Red Shoes", 1);
-		$rafi->addProduct("Red Shoes", 4);
-		$rafi->addProduct("Red Shoes", 2);
-		$rafi->addProduct("Black Shirt", 3);
+		$cart = new Cart;
+		$cart->addProduct("White Cap", 2);
+		$cart->addProduct("Red Shoes", 1);
+		$cart->addProduct("Red Shoes", 4);
+		$cart->addProduct("Red Shoes", 2);
+		$cart->addProduct("Black Shirt", 3);
 		
-		$rafi->removeProduct("Black Shirt");
-		$rafi->removeProduct("Green Jacket");
+		$cart->removeProduct("Black Shirt");
+		$cart->removeProduct("Green Jacket");
 		
-		dd($rafi->showProduct());
+		dd($cart->showProduct());
 	}
 	
 }
